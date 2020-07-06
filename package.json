@@ -1,0 +1,57 @@
+{
+	"name": "vue-widgets-depend",
+	"version": "0.1.0",
+	"description": "vue-widgets-depend",
+	"main": "cjs/index.js",
+	"module": "esm/index.js",
+	"files": [
+		"cjs",
+		"esm",
+		"*.md"
+	],
+	"scripts": {
+		"start": "run-s build",
+		"cjs": "transform-es src -d cjs -c -t cjs",
+		"esm": "transform-es src -d esm -c -t esm",
+		"test": "jest",
+		"clear": "rimraf cjs esm",
+		"build": "run-s clear cjs esm"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/vue-widgets/depend.git"
+	},
+	"keywords": [
+		"vue",
+		"vue-widgets",
+		"depend"
+	],
+	"peerDependencies": {
+		"vue": ">=2.6.0"
+	},
+	"dependencies": {
+		"@babel/runtime": "^7.9.2"
+	},
+	"author": "nobo.zhou@foxmail.com",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/vue-widgets/depend/issues"
+	},
+	"homepage": "https://github.com/vue-widgets/depend#readme",
+	"devDependencies": {
+		"babel-plugin-search-and-replace": "^1.0.1",
+		"npm-run-all": "^4.1.5",
+		"rimraf": "^3.0.2",
+		"transform-es": "^5.0.4",
+		"vue": "^2.6.11"
+	},
+	"browserslist": [
+		">=0.25%",
+		"not dead",
+		"not op_mini all",
+		"not Android 4.4.3-4.4.4",
+		"not ios_saf < 10",
+		"not Chrome < 50",
+		"firefox ESR"
+	]
+}
